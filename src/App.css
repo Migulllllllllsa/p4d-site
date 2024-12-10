@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Uni Wars';
+    src: url('./assets/fonts/uniwars.otf') format('truetype'); 
+  }
+
+.gradient-background {
+    background: linear-gradient(to right, #4facfe, #00f2fe); 
+    height: 810px; 
+    width: 1440px;
+    display: flex; 
+    justify-content: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    color: white; 
+    font-family: 'Uni Wars', sans-serif;
+}
+
+.P4D {
+    font-size: 100px;
+    text-align: left;
+    display: flex;
+    margin-top: 100px;
+}
