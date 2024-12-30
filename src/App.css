@@ -3,22 +3,48 @@
     src: url('./assets/fonts/uniwars.otf') format('truetype'); 
   }
 
-.gradient-background {
-    background: linear-gradient(to right, #4facfe, #00f2fe); 
-    height: 810px; 
-    width: 1440px;
-    display: flex; 
-    justify-content: left;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    color: white; 
-    font-family: 'Uni Wars', sans-serif;
-}
 
-.P4D {
-    font-size: 100px;
-    text-align: left;
+  .page-container {
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+    background: linear-gradient(to right, #022e34, #00c16c, #8fff18);
     display: flex;
-    margin-top: 100px;
-}
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Uni Wars", sans-serif;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 40px;
+    margin-left: 150px;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  
+  /* Texto */
+  .text-section h1 {
+    font-size: 4rem;
+  }
+  
+  .image-section img {
+    position: relative;
+    margin-top: -100px;
+    width: 850px;
+
+  }
