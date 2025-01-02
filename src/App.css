@@ -5,14 +5,13 @@
 
 
   .page-container {
+    overflow:scroll;
     height: 100vh; /* Altura total da viewport */
     width: 100vw; /* Largura total da viewport */
     background: linear-gradient(to right, #022e34, #00c16c, #8fff18);
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
   }
 
   .header {
@@ -28,7 +27,6 @@
   }
 
   .main-content {
-    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: top;
@@ -46,5 +44,42 @@
     position: relative;
     margin-top: -100px;
     width: 850px;
+  }
 
+  .page-container {
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+    background: linear-gradient(to right, #022e34, #00c16c, #8fff18);
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  .Sobre-1 {
+    display: flex;
+    padding: 40px;
+    margin-left: 570px;
+    margin-top: -160px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.4rem;
+  }
+
+  .descricao {
+    margin-top: -40px;
+    margin-left: 700px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 40%;
+    font-family: "poppins", sans-serif;
+  }
+
+  .Laptop2 {
+    width: auto;
+    height: 400px;
+    margin-top: -300px;
+    margin-left: 40px;
+    border-radius: 50%;
+    border: 2px ;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   }
