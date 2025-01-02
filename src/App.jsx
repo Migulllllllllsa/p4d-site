@@ -3,6 +3,8 @@ import './App.css'
 import '@fontsource/montserrat-alternates/700.css';
 import '@fontsource/poppins';
 import note from './assets/images/Computer.png';
+import moco from './assets/images/trabalho.png'
+import liga from './assets/images/Call.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,6 +46,36 @@ function App() {
           <img className='Laptop2'
             src={note} 
             alt="LaptopII"/>
+        </div>
+        <div className='page-container3'>
+          <div className='sobre-2'>
+            <h1 className='about-02'>
+              Serviços
+            </h1>
+          </div>
+          <img className='Menino'
+           src={moco} alt="trabaio" />
+           <div>
+            <p className='descricao02'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Suspendisse a massa venenatis, fringilla sapien vitae, bibendum lectus. Nulla facilisi. In porta mauris tortor, sollicitudin faucibus ipsum placerat in. Suspendisse tristique volutpat porta. Vivamus tellus sem, blandit et dictum quis, commodo ac sapien. Fusce malesuada, nulla mollis rutrum consequat, felis elit interdum tellus, vitae ultrices lacus ante ut lacus. Nunc commodo tempor efficitur. Donec vitae tellus est. Nulla accumsan sagittis dolor. 
+            </p>
+          </div>
+        </div>
+        <div className='page-container4'>
+          <div className='sobre-3'>
+            <h1 className='about-03'>
+              Contato
+            </h1>
+          </div>
+          <img className='menina'
+           src={liga} alt="trabaio" />
+           <div>
+            <p className='descricao03'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Suspendisse a massa venenatis, fringilla sapien vitae, bibendum lectus. Nulla facilisi. In porta mauris tortor, sollicitudin faucibus ipsum placerat in. Suspendisse tristique volutpat porta. Vivamus tellus sem, blandit et dictum quis, commodo ac sapien. Fusce malesuada, nulla mollis rutrum consequat, felis elit interdum tellus, vitae ultrices lacus ante ut lacus. Nunc commodo tempor efficitur. Donec vitae tellus est. Nulla accumsan sagittis dolor. 
+            </p>
+          </div>
         </div>
     </div>
   )

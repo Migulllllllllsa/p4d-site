@@ -83,3 +83,58 @@
     border: 2px ;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   }
+
+  .about-02 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 4.4rem;
+    margin-left: 120px;
+    margin-top: 160px;
+  }
+
+  .Menino {
+    width: auto;
+    height: 400px;
+    margin-top: -20px;
+    margin-left: 1170px;
+    border-radius: 50%;
+    border: 2px ;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .descricao02 {
+    margin-top: -320px;
+    margin-left: 260px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 40%;
+    font-family: "poppins", sans-serif;
+  }
+
+  
+  .about-03 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 4.4rem;
+    margin-left: 120px;
+    margin-top: 160px;
+  }
+
+  .menina {
+    width: auto;
+    height: 400px;
+    margin-top: -20px;
+    margin-left: 70px;
+    border-radius: 50%;
+    border: 2px ;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .descricao03 {
+    margin-top: -320px;
+    margin-left: 700px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 40%;
+    font-family: "poppins", sans-serif;
+  }
