@@ -5,6 +5,7 @@ import '@fontsource/poppins';
 import note from './assets/images/Computer.png';
 import moco from './assets/images/trabalho.png'
 import liga from './assets/images/Call.png'
+import png from './assets/images/Computertransparent.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +26,7 @@ function App() {
         </div>
         <div className="image-section">
           <img
-            src="https://existore.com.br/wp-content/uploads/2023/06/1-Macbook-Air-M2-Tela-13-6-Cinza-espacial.webp" 
+            src={png} 
             alt="Laptop"
           />
           </div>
