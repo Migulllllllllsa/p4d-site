@@ -15,14 +15,25 @@
   }
 
   .header {
+    position: relative; /* Define um contêiner de referência */
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    height: 80px; /* Altura do menu */
+    background-color: #f8f8f8; /* Cor de fundo */
+    border-bottom: 1px solid #ddd;
+    z-index: 1;
   }
 
   .logo {
-    font-size: 45px;
+    position: absolute; /* Faz a logo sobrepor os botões */
+    top: 50%; /* Centraliza verticalmente */
+    left: 20px; /* Distância da borda esquerda */
+    transform: translateY(-50%); /* Ajusta a centralização vertical */
+    font-size: 24px; /* Tamanho da fonte */
     font-weight: bold;
+    color: #fafafa; /* Cor da logo */
+    z-index: 10; /* Garante que a logo fique acima dos botões */
     font-family: "Uni Wars", sans-serif;
   }
 
@@ -137,4 +148,32 @@
     text-align: justify;
     max-width: 40%;
     font-family: "poppins", sans-serif;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os botões */
+    justify-content: center;
+    flex: 1; /* Expande o menu para ocupar o espaço */
+    background-color: #022e34;
+  }
+
+  .nav button {
+    background-color: transparent; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animação para hover */
+    font-family: 'poppins', sans-serif;
+  }
+
+  .nav button:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+  }
+  
+  .nav button:active {
+    transform: scale(0.95); /* Efeito ao clicar */
   }
