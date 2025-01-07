@@ -3,6 +3,10 @@
     src: url('./assets/fonts/uniwars.otf') format('truetype'); 
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 
   .page-container {
     overflow:scroll;
@@ -12,6 +16,10 @@
     display: flex;
     flex-direction: column;
     color: white;
+  }
+
+  .page-container2 {
+    margin-top: 100px;
   }
 
   .header {
@@ -88,7 +96,7 @@
   .Laptop2 {
     width: auto;
     height: 400px;
-    margin-top: -300px;
+    margin-top: -200px;
     margin-left: 40px;
     border-radius: 50%;
     border: 2px ;
@@ -105,7 +113,7 @@
   .Menino {
     width: auto;
     height: 400px;
-    margin-top: -20px;
+    margin-top: -90px;
     margin-left: 1000px;
     border-radius: 50%;
     border: 2px ;
@@ -150,30 +158,34 @@
     font-family: "poppins", sans-serif;
   }
 
-  .nav {
+  .page-container4 {
+    margin-top: 150px;
+  }
+
+  .navbar {
+    flex: 1;
     display: flex;
-    gap: 1rem; /* Espaçamento entre os botões */
-    justify-content: center;
-    flex: 1; /* Expande o menu para ocupar o espaço */
-    background-color: #022e34;
-  }
-
-  .nav button {
-    background-color: transparent; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Animação para hover */
-    font-family: 'poppins', sans-serif;
-  }
-
-  .nav button:hover {
-    background-color: #45a049; /* Cor ao passar o mouse */
+    justify-content: flex-end;
   }
   
-  .nav button:active {
-    transform: scale(0.95); /* Efeito ao clicar */
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-list li {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #0c0c0c;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: #007BFF; /* Mude para a cor desejada */
   }

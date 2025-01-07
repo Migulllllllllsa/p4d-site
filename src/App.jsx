@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import './App.css';
 import '@fontsource/montserrat-alternates/700.css';
 import '@fontsource/poppins';
@@ -8,34 +7,22 @@ import liga from './assets/images/Call.png';
 import png from './assets/images/Computertransparent.png';
 
 function App() {
-  // Referências para as seções
-  const homeRef = useRef(null);
-  const sobreRef = useRef(null);
-  const servicosRef = useRef(null);
-  const contatoRef = useRef(null);
-
-  // Função para rolar até a seção correspondente
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="page-container">
-      {/* Cabeçalho */}
       <header className="header">
         <div className="logo">P4D</div>
-        <nav className="nav">
-          <button onClick={() => scrollToSection(homeRef)}>Home</button>
-          <button onClick={() => scrollToSection(sobreRef)}>Sobre</button>
-          <button onClick={() => scrollToSection(servicosRef)}>Serviços</button>
-          <button onClick={() => scrollToSection(contatoRef)}>Contato</button>
+        {/* Menu de navegação */}
+        <nav className="navbar">
+          <ul className="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
         </nav>
       </header>
 
-      {/* Seção Home */}
-      <main ref={homeRef} className="main-content">
+      <main className="main-content" id="home">
         <div className="text-section">
           <h1>
             O texto <br />
@@ -49,46 +36,44 @@ function App() {
       </main>
 
       {/* Seção Sobre */}
-      <div ref={sobreRef} className="page-container2">
+      <div className="page-container2" id="sobre">
         <div className="Sobre-1">
           <h1 className="about">Sobre</h1>
         </div>
         <div className="descricao">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a massa venenatis,
-            fringilla sapien vitae, bibendum lectus. Nulla facilisi. In porta mauris tortor,
-            sollicitudin faucibus ipsum placerat in.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a massa venenatis, fringilla sapien vitae, bibendum lectus. Nulla
+            facilisi.
           </p>
         </div>
-        <img className="Laptop2" src={note} alt="LaptopII" />
+        <img className='Laptop2' src={note} alt="sla" />
       </div>
 
       {/* Seção Serviços */}
-      <div ref={servicosRef} className="page-container3">
+      <div className="page-container3" id="servicos">
         <div className="sobre-2">
           <h1 className="about-02">Serviços</h1>
         </div>
         <img className="Menino" src={moco} alt="trabalho" />
         <div>
           <p className="descricao02">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a massa venenatis,
-            fringilla sapien vitae, bibendum lectus. Nulla facilisi. In porta mauris tortor,
-            sollicitudin faucibus ipsum placerat in.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a massa venenatis.
           </p>
         </div>
       </div>
 
       {/* Seção Contato */}
-      <div ref={contatoRef} className="page-container4">
+      <div className="page-container4" id="contato">
         <div className="sobre-3">
           <h1 className="about-03">Contato</h1>
         </div>
-        <img className="menina" src={liga} alt="trabalho" />
+        <img className="menina" src={liga} alt="Contato" />
         <div>
           <p className="descricao03">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a massa venenatis,
-            fringilla sapien vitae, bibendum lectus. Nulla facilisi. In porta mauris tortor,
-            sollicitudin faucibus ipsum placerat in.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            a massa venenatis.
           </p>
         </div>
       </div>
