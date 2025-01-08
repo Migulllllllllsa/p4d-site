@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import './App.css';
 import '@fontsource/montserrat-alternates/700.css';
 import '@fontsource/poppins';
@@ -6,7 +7,30 @@ import moco from './assets/images/trabalho.png';
 import liga from './assets/images/Call.png';
 import png from './assets/images/Computertransparent.png';
 
+
+export const ContactUs = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+      publicKey: 'YOUR_PUBLIC_KEY',
+    })
+    .then(
+      () => {
+        console.log('SUCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    )
+  }
+}
+
 function App() {
+  
   return (
     <div className="page-container">
       <header className="header">
@@ -77,6 +101,15 @@ function App() {
           </p>
         </div>
       </div>
+      <form ref={form} onSubmit={sendEmail}>
+        <Label>Name</Label>
+        <input type="text" name="user_name" />
+        <Label>Email</Label>
+        <input type="email"name="user_email" />
+        <Label>Message</Label>
+        <textarea name="message" id=""></textarea>
+        <input type="submit" value={send} />
+      </form>
     </div>
   );
 }
