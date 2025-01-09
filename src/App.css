@@ -198,3 +198,8 @@
   #sobre {
     scroll-margin-top: 200px; /* Ajuste o valor para corresponder à altura do header */
   }
+
+  .Contato {
+    font-family: 'poppins', sans-serif;
+    margin-left: 720px;
+  }

@@ -6,28 +6,9 @@ import note from './assets/images/Computer.png';
 import moco from './assets/images/trabalho.png';
 import liga from './assets/images/Call.png';
 import png from './assets/images/Computertransparent.png';
+import ContactForm from './components/ContactForm';
 
 
-export const ContactUs = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-    .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-      publicKey: 'YOUR_PUBLIC_KEY',
-    })
-    .then(
-      () => {
-        console.log('SUCESS!');
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-      },
-    )
-  }
-}
 
 function App() {
   
@@ -100,16 +81,10 @@ function App() {
             a massa venenatis.
           </p>
         </div>
+           <div className='Contato'>
+              <ContactForm />
+           </div>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
-        <Label>Name</Label>
-        <input type="text" name="user_name" />
-        <Label>Email</Label>
-        <input type="email"name="user_email" />
-        <Label>Message</Label>
-        <textarea name="message" id=""></textarea>
-        <input type="submit" value={send} />
-      </form>
     </div>
   );
 }
