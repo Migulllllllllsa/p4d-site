@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import '../Styles/ContactForm.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -20,11 +22,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
-      <h2>Entre em Contato</h2>
+    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px', }}>
+      <h2>Entre em contato para mais informações</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
-          <label htmlFor="name" style={{ display: 'block', marginBottom: '5px' }}>
+          <label htmlFor="name" style={{ display: 'block', marginBottom: '5px', }}>
             Nome:
           </label>
           <input
@@ -34,7 +36,8 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px' }}
+            className="input-field"
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px', backgroundColor: '#f5f5f5', }}
           />
         </div>
 
@@ -49,7 +52,23 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px' }}
+            className="input-field"
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px', backgroundColor: '#f5f5f5' }}
+          />
+        </div>
+        <div style={{ marginBottom: '15px' }}>
+        <label htmlFor="phone" style={{ display: 'block', marginBottom: '5px' }}>
+            Telefone:
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="input-field"
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px', backgroundColor: '#f5f5f5' }}
           />
         </div>
 
@@ -64,7 +83,8 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows="5"
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px' }}
+            className="input-field"
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '15px', backgroundColor: '#f5f5f5' }}
           ></textarea>
         </div>
 

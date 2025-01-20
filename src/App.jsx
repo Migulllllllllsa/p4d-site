@@ -30,9 +30,9 @@ function App() {
       <main className="main-content" id="home">
         <div className="text-section">
           <h1>
-            O texto <br />
-            <span>fica</span> <br />
-            aqui
+            Conectando tecnologia e inovação <br />
+            <span>para controle de seus ativos</span> <br />
+            e bens utilizando as melhores tecnologias.
           </h1>
         </div>
         <div className="image-section">
@@ -47,9 +47,9 @@ function App() {
         </div>
         <div className="descricao">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            a massa venenatis, fringilla sapien vitae, bibendum lectus. Nulla
-            facilisi.
+          Inovação é o nosso foco.
+          Para construir um negócio de sucesso, é necessário ter o parceiro certo e com boas ferramentas.
+          A P4D Technology é uma empresa dedicada no desenvolvimento de softwares de qualidade e focado no seu negócio.
           </p>
         </div>
         <img className='Laptop2' src={note} alt="sla" />
@@ -63,8 +63,12 @@ function App() {
         <img className="Menino" src={moco} alt="trabalho" />
         <div>
           <p className="descricao02">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            a massa venenatis.
+          Mudar Serviços para Soluções
+          Temos o software certo para sua necessidade
+          Logo do Soft Rental e Asset Control
+          </p>
+          <p className='aguarde'>
+          Aguarde novidades abaixo dos logos
           </p>
         </div>
       </div>
@@ -72,13 +76,11 @@ function App() {
       {/* Seção Contato */}
       <div className="page-container4" id="contato">
         <div className="sobre-3">
-          <h1 className="about-03">Contato</h1>
+          <h1 className="about-03"></h1>
         </div>
         <img className="menina" src={liga} alt="Contato" />
         <div>
           <p className="descricao03">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            a massa venenatis.
           </p>
         </div>
            <div className='Contato'>

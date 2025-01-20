@@ -59,13 +59,13 @@
   
   /* Texto */
   .text-section h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   .image-section img {
     position: relative;
     margin-top: -100px;
-    width: 850px;
+    width: 750px;
   }
 
   .page-container {
@@ -133,6 +133,10 @@
     font-family: "poppins", sans-serif;
   }
 
+  .aguarde {
+    margin-top: 30px;
+    margin-left: 260px;
+  }
   
   .about-03 {
     font-family: "Montserrat Alternates", sans-serif;
