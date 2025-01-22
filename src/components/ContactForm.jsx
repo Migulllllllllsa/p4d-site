@@ -1,7 +1,29 @@
-import { useState } from "react";
-import "../Styles/ContactForm.css";
+import React, { useState } from 'react';
+import '../Styles/ContactForm.css';
+import nodemailer from 'nodemailer';
+
+
 
 const ContactForm = () => {
+
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'no.reply@p4dtech.com.br',
+      pass: 'Mig#121025',
+    },
+  });
+
+
+  const options = {
+    from: 'contato@p4dtech.com.br',
+    to: 'migmuterle@gmail.com',
+    subject: 'hello world',
+    html: '<h1>Teste</h1>',
+  };
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,11 +36,12 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Dados do formulário:", formData);
-    alert("Formulário enviado!");
-    setFormData({ name: "", email: "", message: "" });
+    console.log('Dados do formulário:', formData);
+    alert('Formulário enviado!');
+    setFormData({ name: '', email: '', message: '' });
+    await transporter.sendMail(options);
   };
 
   return (
