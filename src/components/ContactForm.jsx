@@ -1,29 +1,8 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import '../Styles/ContactForm.css';
-import nodemailer from 'nodemailer';
-
-
 
 const ContactForm = () => {
-
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'no.reply@p4dtech.com.br',
-      pass: 'Mig#121025',
-    },
-  });
-
-
-  const options = {
-    from: 'contato@p4dtech.com.br',
-    to: 'migmuterle@gmail.com',
-    subject: 'hello world',
-    html: '<h1>Teste</h1>',
-  };
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,12 +15,36 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Dados do formulário:', formData);
-    alert('Formulário enviado!');
-    setFormData({ name: '', email: '', message: '' });
-    await transporter.sendMail(options);
+
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const userID = import.meta.env.VITE_EMAILJS_USER_ID;
+
+
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
+      .then(
+        (response) => {
+          console.log('Email enviado com sucesso:', response.status, response.text);
+          alert('Formulário enviado com sucesso!');
+          setFormData({ name: '', email: '', phone: '', message: '' }); 
+        },
+        (error) => {
+          console.error('Erro ao enviar o email:', error);
+          alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
+        }
+      );
   };
 
   return (
@@ -91,6 +94,7 @@ const ContactForm = () => {
             }}
           />
         </div>
+
         <div style={{ marginBottom: "15px" }}>
           <label htmlFor="phone" style={{ display: "block", marginBottom: "5px" }}>
             Telefone:
