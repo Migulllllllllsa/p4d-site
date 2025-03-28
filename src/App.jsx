@@ -10,6 +10,7 @@ import logoAc from "./assets/images/logo-ac.png";
 import logoSr from "./assets/images/logo-sr.png";
 import ContactForm from "./components/ContactForm";
 import embac from "./assets/images/transp.png";
+import ImagePopup from "./components/ImagePopup";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,9 +52,9 @@ function App() {
         <h1 className="about-02">Soluções</h1>
         <img className="Menino" src={moco} alt="trabalho" />
         <p className="descricao02">Temos o software certo para sua necessidade</p>
-        <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
-          <img className="Soft" src={logoSr} alt="soft rental" onClick={() => openModal("Soft Rental - Descrição do software...")} style={{ cursor: "pointer" }} />
-          <img className="Asset" src={logoAc} alt="asset control" onClick={() => openModal("Asset Control - Descrição do software...")} style={{ cursor: "pointer" }} />
+        <div className="flex justify-center items-center min-h-screen bg-gray-100" style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
+          <img className="Soft" src={logoSr} alt="soft rental" onClick={() => openModal('soft')} style={{ cursor: "pointer" }} />
+          <img className="Asset" src={logoAc} alt="asset control" onClick={() => openModal('assets')} style={{ cursor: "pointer" }} />
         </div>
         <p className="aguarde">Aguarde novidades</p>
       </div>
@@ -66,14 +67,8 @@ function App() {
         </div>
       </div>
 
-      {modalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close-button" onClick={closeModal}>&times;</span>
-            <p>{modalContent}</p>
-          </div>
-        </div>
-      )}
+      {/* Modal Popup */}
+      <ImagePopup isOpen={modalOpen} content={modalContent} onClose={closeModal} />
     </div>
   );
 }
