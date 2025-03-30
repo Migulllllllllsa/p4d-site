@@ -11,7 +11,8 @@ const ImagePopup = ({ isOpen, content = 'soft' | 'rental', onClose }) => {
         <div className="modal-overlay">
           <div className="modal-content">
             <button className="close-button" onClick={onClose}>✖</button>
-            <p>Soft</p>
+            <p>Soft Rental</p>
+            <p>Soft Rental</p>
           </div>
         </div>);
     } else {
