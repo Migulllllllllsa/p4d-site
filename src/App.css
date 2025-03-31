@@ -211,31 +211,31 @@ html {
   margin-top: -500px;
 }
 
-.glass{
-    width: 90%;
-    height: 100vh;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    background-size: cover; 
-    margin-top: -500px;
-    margin-left: -280px;
-    border-radius: 15px; /* Cantos arredondados */
-    padding: 20px;
+.glass {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  background-size: cover;
+  margin-top: -500px;
+  margin-left: -280px;
+  border-radius: 15px; /* Cantos arredondados */
+  padding: 20px;
 }
 
-.Soft{
+.Soft {
   width: 400px;
   position: relative;
   margin-left: 60px;
   top: 70px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-  }
+}
 
-.Asset{
+.Asset {
   position: relative;
   width: 350px;
-  height: auto ;
+  height: auto;
   margin-left: -15px;
   top: 30px;
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));

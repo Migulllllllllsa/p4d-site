@@ -1,5 +1,5 @@
 {
-  "name": "landinxx",
+  "name": "p4dtech-site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,7 @@
     "@emailjs/browser": "^4.4.1",
     "@fontsource/montserrat-alternates": "^5.1.0",
     "@fontsource/poppins": "^5.1.1",
-    "@react-email/components": "^0.0.13",
+    "@react-email/components": "^0.0.34",
     "dotenv": "^16.4.7",
     "emailjs-com": "^3.2.0",
     "nodemailer": "^6.9.16",

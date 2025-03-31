@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import '../Styles/ContactForm.css';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import "../Styles/ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +18,6 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -26,25 +25,21 @@ const ContactForm = () => {
       message: formData.message,
     };
 
-
     const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const userID = import.meta.env.VITE_EMAILJS_USER_ID;
 
-
-    emailjs
-      .send(serviceID, templateID, templateParams, userID)
-      .then(
-        (response) => {
-          console.log('Email enviado com sucesso:', response.status, response.text);
-          alert('Formulário enviado com sucesso!');
-          setFormData({ name: '', email: '', phone: '', message: '' }); 
-        },
-        (error) => {
-          console.error('Erro ao enviar o email:', error);
-          alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
-        }
-      );
+    emailjs.send(serviceID, templateID, templateParams, userID).then(
+      (response) => {
+        console.log("Email enviado com sucesso:", response.status, response.text);
+        alert("Formulário enviado com sucesso!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      },
+      (error) => {
+        console.error("Erro ao enviar o email:", error);
+        alert("Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.");
+      }
+    );
   };
 
   return (
