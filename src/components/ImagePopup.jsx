@@ -1,32 +1,47 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import logoAc from "../assets/images/logo-ac.png";
+import logoSr from "../assets/images/logo-sr.png";
 
-
-
-const ImagePopup = ({ isOpen, content = 'soft' | 'rental', onClose }) => {
+const ImagePopup = ({ isOpen, content = "soft" | "rental", onClose }) => {
   if (!isOpen) return null; // Se o modal não estiver aberto, não renderiza nada
 
   function returnByType() {
-    if (content === 'soft') {
+    if (content === "soft") {
       return (
         <div className="modal-overlay">
           <div className="modal-content">
-            <button className="close-button" onClick={onClose}>✖</button>
-            <p>Soft Rental</p>
-            <p>Soft Rental</p>
+            <button className="close-button" onClick={onClose}>
+              ✖
+            </button>
+            <img
+              className="soft-modal"
+              src={logoSr}
+              alt="soft rental"
+              style={{ cursor: "pointer" }}
+            />
           </div>
-        </div>);
+        </div>
+      );
     } else {
       return (
         <div className="modal-overlay">
           <div className="modal-content">
-            <button className="close-button" onClick={onClose}>✖</button>
-            <p>Asset</p>
+            <button className="close-button" onClick={onClose}>
+              ✖
+            </button>
+            <img
+              className="asset-modal"
+              src={logoAc}
+              alt="asset control"
+              style={{ cursor: "pointer" }}
+            />
           </div>
-        </div>)
+        </div>
+      );
     }
   }
 
-  return returnByType()
+  return returnByType();
 };
 
 export default ImagePopup;

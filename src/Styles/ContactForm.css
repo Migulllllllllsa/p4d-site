@@ -1,14 +1,14 @@
 .input-field {
-    background-color: #fafaaf; /* Fundo branco */
-    color: #1b1b1b;            /* Texto preto */
-    padding: 8px;
-    width: 100%;
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .input-field:focus {
-    outline: none; /* Remove a linha preta de foco */
-    border-color: #007BFF; /* Borda azul ao focar */
-  }
+  background-color: #fafaaf; /* Fundo branco */
+  color: #1b1b1b; /* Texto preto */
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none; /* Remove a linha preta de foco */
+  border-color: #007bff; /* Borda azul ao focar */
+}
